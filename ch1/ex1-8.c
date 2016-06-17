@@ -5,7 +5,7 @@ int main() {
 	char c;
 
 	while((c = getchar()) != EOF) {
-		if (c == ' ' || c == '\t' || c == 'n')
+		if (c == ' ' || c == '\t' || c == '\n')
 			spaces ++;
 	}
 
