@@ -1,17 +1,20 @@
 #include <stdio.h>
 
+#define IN 1
+#define OUT 0
+
 int main() {
-	int c, in_space;
-	in_space = 0;
+	int c, state;
+	state = OUT;
 	
 	while ((c = getchar()) != EOF) {
 		if (c == ' ') {
-			if (in_space == 0) {
+			if (state == OUT) {
 				putchar(c);
-				in_space = 1;
+				state = IN;
 			}
 		} else {
-			in_space = 0;
+			state = OUT;
 			putchar(c);
 		}
 	}
